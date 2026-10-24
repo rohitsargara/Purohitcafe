@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Forum', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  --color-botanical: #606e53;
+  --color-botanical-dark: #0d1819;
+  --color-botanical-surface: #171819;
+  --color-botanical-light: #7b8d6b;
+}
+
+:root {
+  --main-color: #606e53;
+  --main-color-hover: #4d5942;
+  --body-bg-color: #0d1819;
+  --color-one: #a7a7a7;
+  --color-two: #0e0d0b;
+  --color-three: #595653;
+  --color-four: #171819;
+  --font-family-DMsans: 'DM Sans', sans-serif;
+  --font-family-Forum: 'Forum', cursive;
+  --font-family-GreatVibes: 'Great Vibes', cursive;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: #ffffff;
+  font-family: var(--font-family-DMsans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-forum {
+  font-family: var(--font-family-Forum);
+}
+
+.font-great-vibes {
+  font-family: var(--font-family-GreatVibes);
+}
+
+/* Botanical Theme Button - Signature Button Flip Effect */
+.btn-botanical {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 3px;
+  font-weight: 700;
+  padding: 12px 38px;
+  font-size: 12px;
+  background-color: #606e53;
+  border: 2px solid #606e53;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn-botanical::before {
+  content: "";
+  position: absolute;
+  width: 220%;
+  height: 220%;
+  top: -220%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #0e0d0b;
+  transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-botanical:hover::before {
+  top: -40%;
+}
+
+.btn-botanical:hover {
+  border-color: #606e53;
+  color: #ffffff;
+}
+
+.btn-botanical .btn-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.btn-botanical .text-one {
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s;
+}
+
+.btn-botanical .text-two {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: block;
+  color: #ffffff;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.35s;
+}
+
+.btn-botanical:hover .text-one {
+  transform: translateY(-150%);
+}
+
+.btn-botanical:hover .text-two {
+  top: 0;
+}
+
+/* Secondary Outline Button */
+.btn-botanical-outline {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 11px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-botanical-outline:hover {
+  border-color: #606e53;
+  background-color: #606e53;
+  color: #000000;
+}
+
+/* Rotating Book-Btn diamond in hero */
+.book-diamond-btn {
+  position: relative;
+  width: 105px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.book-diamond-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transform: rotate(45deg);
+  transition: all 0.4s ease;
+  background: rgba(13, 24, 25, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.book-diamond-btn:hover::before {
+  border-color: #606e53;
+  background: #606e53;
+  transform: rotate(225deg);
+}
+
+.book-diamond-btn:hover .book-text {
+  color: #000000;
+}
+
+/* Subtitle styling */
+.section-subtitle {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #606e53;
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  display: block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1819;
+}
+::-webkit-scrollbar-thumb {
+  background: #606e53;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a8c6a;
+}

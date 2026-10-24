@@ -1,0 +1,8 @@
+{
+  "name": "Botanical Café Udaipur",
+  "description": "Nestled in a serene, plant-filled oasis in Udaipur, Botanical Café blends lush greenery with gourmet delights, artisanal beverages, and peaceful nature-inspired dining.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
